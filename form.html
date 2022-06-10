@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Заявка Starbuzz</title>
+    <link rel="stylesheet" type="text/css" href="starbuzz.css">
+    <link rel="stylesheet" type="text/css" href="styledform.css">
+  </head>
+  <body>
+
+    <h1>Starbuzz</h1>
+    <h2>Заполни все что находится внизу и нажми кнопку "Отправить"</h2>
+
+     <form action="http://www.starbuzzcoffee.com/processorder.php" method="POST">
+      <table>
+        <th> Выберите кофе: </th>
+        <td>
+       <select name="beans">
+          <option value="Смесь">Домашняя смесь</option>
+          <option value="Боливия">Боливия</option>
+          <option value="Гватемала">Гватемала</option
+          <option value="Кения">Кения</option>
+       </select>
+       </td>
+      </tr>
+      <tr>
+      <th>Тип: </th>
+       <td>
+        <input type="radio" name="beantype" checked="checked" value="зерна" />Кофе в зернах <br />
+        <input type="radio" name="beantype" value="молотый" />Молотый кофе <br />
+      </td>
+      <tr>
+      <th>Дополнительные услуги: </th>
+       <td>
+        <input type="checkbox" name="extras[]" value="упаковка" />Подарочная упаковка <br />
+        <input type="checkbox" name="extras[]" value="каталог" checked="checked" /> Доставка каталога вместе с заказом <br />
+       </td>
+      </tr>
+              
+      <tr>
+         <th> Доставить по адресу: </th>
+          <td>
+           <table>
+            <tr>
+             <td>Имя:</td>
+              <td> <input type="text" name="name" /> </td>
+            </tr>
+            <tr>
+              <td>Адрес:</td> 
+               <td><input type="text" name="address" /> </td>
+             </tr>
+             <tr>
+               <td>Город:</td> 
+                <td><input type="text" name="city" /> </td>
+             </tr>
+             <tr>
+                <td>Страна:</td>
+                 <td> <input type="text" name="state" /> </td>
+             </tr>
+             <tr>         
+                <td>Индекс:</td> 
+                <td><input type="text" name="zip" /> </td>
+             </tr>
+            </table>
+           </td>
+          </tr>
+
+      <tr>
+         <th>Комментарии:</th>
+         <td>
+           <textarea name="comments" rows="10" cols="48"></textarea>
+         </td> 
+        </tr>
+               
+      <tr>
+           <th></th>
+             <td><input type="submit" value="Заказать сейчас" /></td>
+      </tr>
+     </table>  
+    </form>
+  </body>
+</html>
+
